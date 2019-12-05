@@ -1,0 +1,11 @@
+Package: sdlabFunctions
+Type: Package
+Title: Stress and Development Lab Function Library
+Version: 0.2.0
+Author: Various
+Maintainer: Matthew Peverill <mrpeverill@gmail.com>
+Description: Convenience and Scoring functions. Use at your own risk!
+License: MIT + file License.txt
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.0.0
