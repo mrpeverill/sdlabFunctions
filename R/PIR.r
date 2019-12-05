@@ -4,9 +4,9 @@ PIRcalc<- function(income,size,children,year=2018) {
   #' This function calculates the ratio of total family income given number of adults and children in a family.
   #' You must provide the year of the poverty thresholds you want to use, which are presently hard coded (it would be great to move them to a package data folder later).
   #'
-  #' @income vector of total household income
-  #' @size vector of total family size (including children)
-  #' @children vector of number of children in the family.
+  #' @param income vector of total household income
+  #' @param size vector of total family size (including children)
+  #' @param year vector of number of children in the family.
   ThresholdList<-list("2018"=matrix(data=c(13064,NA,NA,NA,NA,NA,NA,NA,NA,
                                     16815,17308,NA,NA,NA,NA,NA,NA,NA,
                                     19642,20212,20231,NA,NA,NA,NA,NA,NA,
