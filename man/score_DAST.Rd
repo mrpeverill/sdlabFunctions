@@ -2,12 +2,15 @@
 % Please edit documentation in R/DAST.R
 \name{score_DAST}
 \alias{score_DAST}
-\title{This is a scoring program for the 28 item Drug Abuse Screening Test.
-It accepts a data frame with 28 columns corresponding to responses
-on the measure (in order).}
+\title{Score the 28 item Drug Abuse Screening Test}
 \usage{
 score_DAST(meas)
 }
 \description{
+This is a scoring program for the 28 item Drug Abuse Screening Test.
+It accepts a data frame with 28 columns corresponding to responses
+on the measure (in order).
+}
+\details{
 \code{score_DAST} Returns a total symptom score.
 }

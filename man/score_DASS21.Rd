@@ -2,12 +2,15 @@
 % Please edit documentation in R/DASS.r
 \name{score_DASS21}
 \alias{score_DASS21}
-\title{This is a scoring program for the Depression and Anxiety Stress Scale-21.
-It accepts a data frame with 21 columns corresponding to responses
-on the measure (in order).}
+\title{Score the Depression and Anxiety Stress Scale-21}
 \usage{
 score_DASS21(meas)
 }
 \description{
+This is a scoring program for the Depression and Anxiety Stress Scale-21.
+It accepts a data frame with 21 columns corresponding to responses
+on the measure (in order).
+}
+\details{
 \code{score_DASS21} Returns three indices: depression, anxiety, and stress.
 }

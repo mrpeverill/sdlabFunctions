@@ -2,7 +2,7 @@
 % Please edit documentation in R/CTQ.R
 \name{score_CTQ}
 \alias{score_CTQ}
-\title{This is a scoring program for the CTQ.}
+\title{Score the Childhood Trauma Questionnaire}
 \usage{
 score_CTQ(data, thresh.scores = TRUE)
 }
@@ -12,5 +12,8 @@ score_CTQ(data, thresh.scores = TRUE)
 \item{thresh.scores}{boolean - program returns threshold scores if TRUE.}
 }
 \description{
+This is a scoring program for the CTQ.
+}
+\details{
 \code{score_CTQ} Returns cluster scores for CTQ subscales, along with dichotomous threshold variables.
 }

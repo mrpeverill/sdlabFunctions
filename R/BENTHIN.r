@@ -1,9 +1,13 @@
 score_BENTHIN<-function(meas) {
+  #' Benthin Risk Perception Scale.
+  #' 
   #' This is a scoring program for the Benthin Risk Perception Scale.
   #' It accepts a data frame with 54 columns corresponding to responses
   #' on the measure (in order).
   #'
   #' \code{score_BDI2} Returns four indices: fear, risk, benefit, and severity.
+  #' 
+  #' @export
   
   #Length Check
   stopifnot(length(meas)==54)

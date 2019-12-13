@@ -2,12 +2,15 @@
 % Please edit documentation in R/BENTHIN.r
 \name{score_BENTHIN}
 \alias{score_BENTHIN}
-\title{This is a scoring program for the Benthin Risk Perception Scale.
-It accepts a data frame with 54 columns corresponding to responses
-on the measure (in order).}
+\title{Benthin Risk Perception Scale.}
 \usage{
 score_BENTHIN(meas)
 }
 \description{
+This is a scoring program for the Benthin Risk Perception Scale.
+It accepts a data frame with 54 columns corresponding to responses
+on the measure (in order).
+}
+\details{
 \code{score_BDI2} Returns four indices: fear, risk, benefit, and severity.
 }

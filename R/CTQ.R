@@ -1,10 +1,14 @@
 score_CTQ <- function(data,thresh.scores=TRUE) {
+  #' Score the Childhood Trauma Questionnaire
+  #' 
   #' This is a scoring program for the CTQ.
   #'
   #' \code{score_CTQ} Returns cluster scores for CTQ subscales, along with dichotomous threshold variables.
   #'
   #' @param data n×28 vector of reported responses.
   #' @param thresh.scores boolean - program returns threshold scores if TRUE.
+  #' 
+  #' @export
 
   #Check Dimensionality
   if (dim(haka)[2] != 28) stop("data has wrong length; 28 items must be specified")

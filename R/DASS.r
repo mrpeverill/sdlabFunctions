@@ -1,9 +1,13 @@
 score_DASS21<-function(meas) {
+  #' Score the Depression and Anxiety Stress Scale-21
+  #' 
   #' This is a scoring program for the Depression and Anxiety Stress Scale-21.
   #' It accepts a data frame with 21 columns corresponding to responses
   #' on the measure (in order). 
   #'
   #' \code{score_DASS21} Returns three indices: depression, anxiety, and stress.
+  #' 
+  #' @export
   
   #Length Check
   stopifnot(length(meas)==21)

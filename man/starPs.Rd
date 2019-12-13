@@ -2,7 +2,7 @@
 % Please edit documentation in R/starPs.R
 \name{starPs}
 \alias{starPs}
-\title{This function formats '***' style significance strings for a column of p values.}
+\title{Calculate sig. stars}
 \usage{
 starPs(p, s3 = 0.001, s2 = 0.01, s1 = 0.05)
 }

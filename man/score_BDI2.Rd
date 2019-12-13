@@ -2,12 +2,15 @@
 % Please edit documentation in R/BDI2.r
 \name{score_BDI2}
 \alias{score_BDI2}
-\title{This is a scoring program for the Beck Depression Inventory (v2).
-It accepts a data frame with 21 columns corresponding to responses
-on the measure.}
+\title{Score the Beck Depression Inventory (v2)}
 \usage{
 score_BDI2(meas)
 }
 \description{
+This is a scoring program for the Beck Depression Inventory (v2).
+It accepts a data frame with 21 columns corresponding to responses
+on the measure.
+}
+\details{
 \code{score_BDI2} Returns a symptom total.
 }

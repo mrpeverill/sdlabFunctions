@@ -2,7 +2,7 @@
 % Please edit documentation in R/SCARED.r
 \name{score_SCARED}
 \alias{score_SCARED}
-\title{This is a scoring program for the SCARED}
+\title{Score the SCARED}
 \usage{
 score_SCARED(meas, nathresh = 3)
 }
