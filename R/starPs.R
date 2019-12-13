@@ -7,7 +7,9 @@ starPs<-function(p,s3=.001,s2=.01,s1=.05) {
 	#' @param s1 Largest, *, significance threshold.
 	#' 
 	#' 
-	sapply(p,function(x) if(x<=s3) {
+	sapply(p,function(x) if(is.na(x)) {
+		NA
+	} else if(x<=s3) {
 		'***'
 	} else if(x<=s2) {
 		'**'
