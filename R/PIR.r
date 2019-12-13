@@ -7,6 +7,8 @@ PIRcalc<- function(income,size,children,year=2018) {
   #' @param income vector of total household income
   #' @param size vector of total family size (including children)
   #' @param year vector of number of children in the family.
+  #' 
+  #' @export
   ThresholdList<-list("2018"=matrix(data=c(13064,NA,NA,NA,NA,NA,NA,NA,NA,
                                     16815,17308,NA,NA,NA,NA,NA,NA,NA,
                                     19642,20212,20231,NA,NA,NA,NA,NA,NA,
