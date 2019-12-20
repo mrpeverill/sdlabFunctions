@@ -11,9 +11,9 @@ score_CTQ <- function(data,thresh.scores=TRUE) {
   #' @export
 
   #Check Dimensionality
-  if (dim(haka)[2] != 28) stop("data has wrong length; 28 items must be specified")
-  data<-data-1
-  data[,c(2,5,7,13,19,26,28)]<-(data[,c(2,5,7,13,19,26,28)]-4)*-1
+  if (dim(data)[2] != 28) stop("data has wrong length; 28 items must be specified")
+  #data<-data-1
+  data[,c(2,5,7,13,19,26,28)]<-(6-data[,c(2,5,7,13,19,26,28)])
   CTQ_physneg = rowSums(data[,c(1,2,4,6,26)])
   CTQ_emoneg = rowSums(data[,c(5,7,13,19,28)])
   CTQ_emoab = rowSums(data[,c(3, 8, 14, 18, 25)])
