@@ -18,7 +18,7 @@ score_CDI2(
 
 \item{tscore}{should the program calculate t-scores (currently ignores gender)}
 
-\item{navalue}{What should we inpute for missing item scores? 0-2 or NULL. 'fiml' will attempt to use fiml to estimate item scores. NA will retain NA through scoring.}
+\item{navalue}{What should we inpute for missing item scores? 0-2 or NULL. NA will retain NA through scoring.}
 
 \item{nathresh}{How many items can be imputed before the subject's score is invalidated?
 

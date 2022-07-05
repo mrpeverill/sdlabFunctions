@@ -6,7 +6,7 @@ score_CDI2 <- function(meas,component=TRUE,tscore=TRUE,nacorrect=FALSE,navalue=1
 	#' @param data n×28 vector of item responses
 	#' @param component should the component scores be returned?
 	#' @param tscore should the program calculate t-scores (currently ignores gender)
-	#' @param navalue What should we inpute for missing item scores? 0-2 or NULL. 'fiml' will attempt to use fiml to estimate item scores. NA will retain NA through scoring. 
+	#' @param navalue What should we inpute for missing item scores? 0-2 or NULL. NA will retain NA through scoring. 
 	#' @param nathresh How many items can be imputed before the subject's score is invalidated?
 	#' 
 	#' This is a scoring program for the 28 item Childhood Depression Inventory.
