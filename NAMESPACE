@@ -3,6 +3,7 @@
 export(PIRcalc)
 export(score_BDI2)
 export(score_BENTHIN)
+export(score_BQAQ)
 export(score_CTQ)
 export(score_DASS21)
 export(score_DAST)
