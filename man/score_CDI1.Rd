@@ -7,7 +7,6 @@
 score_CDI1(
   meas,
   component = TRUE,
-  tscore = TRUE,
   nacorrect = FALSE,
   navalue = 1,
   nathresh = 3
@@ -25,5 +24,5 @@ on the measure (in order).}
 \item{data}{n×28 vector of item responses}
 }
 \description{
-\code{score_CDI2} Returns total symptom score for the CDI.
+\code{score_CDI2} Returns (raw) total symptom score for the CDI.
 }

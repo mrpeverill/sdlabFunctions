@@ -7,7 +7,6 @@
 score_CDI2(
   meas,
   component = TRUE,
-  tscore = TRUE,
   nacorrect = FALSE,
   navalue = 1,
   nathresh = 3
@@ -15,8 +14,6 @@ score_CDI2(
 }
 \arguments{
 \item{component}{should the component scores be returned?}
-
-\item{tscore}{should the program calculate t-scores (currently ignores gender)}
 
 \item{navalue}{What should we inpute for missing item scores? 0-2 or NULL. NA will retain NA through scoring.}
 
@@ -29,5 +26,5 @@ on the measure (in order). It returns raw scores only.}
 \item{data}{n×28 vector of item responses}
 }
 \description{
-\code{score_CDI2} Returns total symptom score for the CDI.
+\code{score_CDI2} Returns (raw) total symptom score for the CDI.
 }

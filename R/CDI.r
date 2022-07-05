@@ -1,11 +1,10 @@
-score_CDI2 <- function(meas,component=TRUE,tscore=TRUE,nacorrect=FALSE,navalue=1,nathresh=3) {
+score_CDI2 <- function(meas,component=TRUE,nacorrect=FALSE,navalue=1,nathresh=3) {
 	#' This is a scoring program for the CDI version 2.
 	#'
-	#' \code{score_CDI2} Returns total symptom score for the CDI.
+	#' \code{score_CDI2} Returns (raw) total symptom score for the CDI.
 	#'
 	#' @param data n×28 vector of item responses
 	#' @param component should the component scores be returned?
-	#' @param tscore should the program calculate t-scores (currently ignores gender)
 	#' @param navalue What should we inpute for missing item scores? 0-2 or NULL. NA will retain NA through scoring. 
 	#' @param nathresh How many items can be imputed before the subject's score is invalidated?
 	#' 
@@ -15,28 +14,17 @@ score_CDI2 <- function(meas,component=TRUE,tscore=TRUE,nacorrect=FALSE,navalue=1
 	#'
 	
 	# Error Handling
-	Check<-ArgumentCheck::newArgCheck()
-	
-	if (length(meas)!=28) {
-		ArgumentCheck::addError(
-			msg="Incorrect number of columns specified. Length should be 28",
-			argcheck=Check
-		)
-	}
-	
-	`%nin%` = Negate(`%in%`)
-	
-	if (navalue != "fiml" ) {
-		if (navalue %nin% c(0,1,2,NULL)) {
-		ArgumentCheck::addError(
-			msg="navalue should be 0,1,2, or 'fiml'",
-			argcheck=Check
-		)
-		}
-	}
-	
-	
-	ArgumentCheck::finishArgCheck(Check)
+	inputchecks<-checkmate::makeAssertCollection()
+	checkmate::assertChoice(navalue,
+							c(0,1,2),
+							null.ok=TRUE,
+							add = inputchecks
+							)
+	checkmate::assertVector(meas,
+							min.len=28,
+							max.len=28,
+							add=inputchecks)
+	checkmate::reportAssertions(inputchecks)
 	
 	#Reverse Scoring
 	reverse<-c(2,6,7,9,10,12,14,15,17,20,23,24,26,27)
@@ -88,10 +76,10 @@ score_CDI2 <- function(meas,component=TRUE,tscore=TRUE,nacorrect=FALSE,navalue=1
 	return(results[,returnindices])
 }
 
-score_CDI1 <- function(meas,component=TRUE,tscore=TRUE,nacorrect=FALSE,navalue=1,nathresh=3) {
+score_CDI1 <- function(meas,component=TRUE,nacorrect=FALSE,navalue=1,nathresh=3) {
 	#' This is a scoring program for the CDI version 1.
 	#'
-	#' \code{score_CDI2} Returns total symptom score for the CDI.
+	#' \code{score_CDI2} Returns (raw) total symptom score for the CDI.
 	#'
 	#' @param data n×28 vector of item responses
 	#' @param navalue What should we inpute for missing item scores? 0-2 or NULL. 'fiml' will attempt to use fiml to estimate item scores. NA will retain NA through scoring. 
@@ -103,28 +91,17 @@ score_CDI1 <- function(meas,component=TRUE,tscore=TRUE,nacorrect=FALSE,navalue=1
 	#'
 	
 	# Error Handling
-	Check<-ArgumentCheck::newArgCheck()
-	
-	if (length(meas)!=26) {
-		ArgumentCheck::addError(
-			msg="Incorrect number of columns specified. Length should be 28",
-			argcheck=Check
-		)
-	}
-	
-	`%nin%` = Negate(`%in%`)
-	
-	if (navalue != "fiml" ) {
-		if (navalue %nin% c(0,1,2,NULL)) {
-			ArgumentCheck::addError(
-				msg="navalue should be 0,1,2, or 'fiml'",
-				argcheck=Check
-			)
-		}
-	}
-	
-	
-	ArgumentCheck::finishArgCheck(Check)
+	inputchecks<-checkmate::makeAssertCollection()
+	checkmate::assertChoice(navalue,
+							c(0,1,2),
+							null.ok=TRUE,
+							add = inputchecks
+	)
+	checkmate::assertVector(meas,
+							min.len=26,
+							max.len=26,
+							add=inputchecks)
+	checkmate::reportAssertions(inputchecks)
 	
 	#Reverse Scoring
 	reverse<-c(2,5,7,8,9,10,12,14,15,17,20,23,24)
