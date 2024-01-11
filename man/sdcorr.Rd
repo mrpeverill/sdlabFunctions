@@ -4,12 +4,16 @@
 \alias{sdcorr}
 \title{Print a pretty correlation table.}
 \usage{
-sdcorr(data, digits = 2)
+sdcorr(data, digits = 2, labels = NULL, starAttach = FALSE)
 }
 \arguments{
 \item{data}{a data frame with just numeric data.}
 
 \item{digits}{How many digits to print?}
+
+\item{labels}{Optional character vector of row labels. NULL uses variable names.}
+
+\item{starAttach}{If true, concatenate stars and correlations in character values.}
 }
 \description{
 This function prints a pretty correlation table.
