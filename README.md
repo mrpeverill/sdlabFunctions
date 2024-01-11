@@ -2,7 +2,7 @@
 This is the Stress and Development Function Library! To load the package:
 
 1. library(devtools)
-2. install_github("halpclub/sdlabFunctions")
+2. install_github("mrpeverill/sdlabFunctions")
 3. library(sdlabFunctions)
 
 A few guidelines for building new packages:
